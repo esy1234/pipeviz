@@ -282,6 +282,7 @@ PipelineIE::Export (QSharedPointer<GraphManager> pgraph,
   std::vector<ElementInfo> info = pgraph->GetInfo ();
 
   QXmlStreamWriter xmlWriter;
+  xmlWriter.setAutoFormatting(true);
   xmlWriter.setDevice (&file);
   xmlWriter.writeStartDocument ();
   xmlWriter.writeStartElement ("pipeline");
